@@ -1,0 +1,25 @@
+name: Github Actions Test
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: initialize node
+        uses: actions/setup-node@v4
+        
+      - name: Install Node
+        run : npm install
+        
+      - name: Test Backened
+        run : npm test
+      
