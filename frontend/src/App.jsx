@@ -55,7 +55,7 @@ export default function App() {
 
                 {/* Response */}
                 <span className="text-sm font-medium text-white truncate flex-1 text-right">
-                  {!s ? "Loading..." : s}
+                  {!s ? "Loading...." : s}
                 </span>
 
               </div>
